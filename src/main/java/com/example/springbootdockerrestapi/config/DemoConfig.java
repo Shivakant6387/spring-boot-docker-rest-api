@@ -15,7 +15,9 @@ public class DemoConfig extends WebSecurityConfigurerAdapter {
     @Override
     public void configure(WebSecurity webSecurity) throws Exception {
         webSecurity.ignoring()
-                .antMatchers("/api/demo/home");
+                .antMatchers("/api/demo/home")
+                .antMatchers("/api/patient/**")
+                .antMatchers("/api/doctor/**");
 
     }
 
