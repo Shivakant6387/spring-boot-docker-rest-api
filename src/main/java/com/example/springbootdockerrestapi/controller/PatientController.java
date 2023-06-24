@@ -16,7 +16,7 @@ public class PatientController {
     public List<Patient> getAllPatients() {
         return patientService.getAllPatients();
     }
-    @GetMapping("getPatient/{id}")
+    @GetMapping("/getPatient/{id}")
     public Patient getPatientById(Long id) {
         return patientService.getPatientById(id);
     }
@@ -24,7 +24,7 @@ public class PatientController {
     public Patient createPatient(@RequestBody Patient patient) {
         return patientService.createPatient(patient);
     }
-    @PutMapping("updatePatient/{id}")
+    @PutMapping("/updatePatient/{id}")
     public Patient updatePatient(@PathVariable Long id, @RequestBody Patient patient) {
         return patientService.updatePatient(id,patient);
     }

@@ -22,17 +22,17 @@ public class PrescriptionController {
         return prescriptionService.createPrescription(prescription);
     }
 
-    @GetMapping("getPrescription/{id}")
+    @GetMapping("/getPrescription/{id}")
     public Prescription getPrescriptionById(@PathVariable Long id) {
         return prescriptionService.getPrescriptionById(id);
     }
 
-    @PutMapping("updatePrescription/{id}")
+    @PutMapping("/updatePrescription/{id}")
     public Prescription updatePrescription(@PathVariable Long id, @RequestBody Prescription prescription) {
         return prescriptionService.updatePrescription(id, prescription);
     }
 
-    @DeleteMapping("deletePrescription/{id}")
+    @DeleteMapping("/deletePrescription/{id}")
     public void deletePrescription(@PathVariable Long id) {
         prescriptionService.deletePrescription(id);
     }
