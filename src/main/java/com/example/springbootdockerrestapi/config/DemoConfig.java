@@ -17,8 +17,9 @@ public class DemoConfig extends WebSecurityConfigurerAdapter {
         webSecurity.ignoring()
                 .antMatchers("/api/demo/home")
                 .antMatchers("/api/patient/**")
-                .antMatchers("/api/doctor/**");
-
+                .antMatchers("/api/doctor/**")
+                .antMatchers("/api/appointments/**")
+                .antMatchers("/api/prescriptions/**");
     }
 
 }
